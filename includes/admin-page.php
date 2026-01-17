@@ -74,5 +74,19 @@ function mrs_gutschein_extend_admin_page() {
             <?php submit_button(__('Speichern', 'mrs-gutschein-extend')); ?>
         </form>
     </div>
+
+    <!-- ads Panner -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489084906460704"
+        crossorigin="anonymous"></script>
+        <!-- Plugin Ads -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4489084906460704"
+            data-ad-slot="7372766472"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     <?php
 }
