@@ -1,44 +1,36 @@
 <?php
 /**
- * Plugin Name: mrs Gutschein Extend
- * Plugin URI:  https://mrs-dev.com/plugin
- * Description: Free + Pro Gutschein-Logik für WooCommerce. Deaktiviert Angebotspreise bei bestimmten Gutscheinen/Produkten/Kategorien. Pro-Funktionen via Lemon Squeezy Lizenz freischaltbar.
- * Version:     1.1.0
- * Author:      MRS-DEV
- * Author URI:  https://mrs-dev.com
+ * Plugin Name: MRS Gutschein Extend
+ * Plugin URI:  https://example.com
+ * Description: Extends WooCommerce coupons by disabling sale prices when selected coupons are applied.
+ * Author: Raeed
+ * Version: 1.0.0
+ * License: GPL v2 or later
  * Text Domain: mrs-gutschein-extend
  * Domain Path: /languages
- * License:     GPLv2 or later
  */
 
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-/* -------------------------
- * Konfiguration
- * ------------------------- */
-if (!defined('MRSG_SLUG')) define('MRSG_SLUG', 'mrs-gutschein-extend');
-// Trage hier (falls gewünscht) deine Verkaufs-URL ein (Lemon Squeezy Produktseite)
-if (!defined('MRSG_BUY_URL')) define('MRSG_BUY_URL', 'https://your-lemonsqueezy-product-link.example');
+/**
+ * ===== TEXTDOMAIN LADEN =====
+ */
+add_action('plugins_loaded', 'mrs_gutschein_extend_load_textdomain');
+function mrs_gutschein_extend_load_textdomain() {
+    load_plugin_textdomain(
+        'mrs-gutschein-extend',
+        false,
+        dirname(plugin_basename(__FILE__)) . '/languages/'
+    );
+}
 
-// Produkt-ID aus deinem Lemon Squeezy Account (du hast gegeben)
-if (!defined('MRSG_PRODUCT_ID')) define('MRSG_PRODUCT_ID', 694245);
+/**
+ * ===== ADMIN & LOGIK LADEN =====
+ */
+if (is_admin()) {
+    require_once plugin_dir_path(__FILE__) . 'includes/admin-page.php';
+}
 
-/* Includes */
-require_once plugin_dir_path(__FILE__) . 'includes/admin-menu.php';
-require_once plugin_dir_path(__FILE__) . 'includes/license-system.php';
-require_once plugin_dir_path(__FILE__) . 'includes/gutschein-logic.php';
-
-/* i18n */
-add_action('plugins_loaded', function(){
-    load_plugin_textdomain('mrs-gutschein-extend', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-});
-
-/* Activation / Deactivation */
-register_activation_hook(__FILE__, function(){
-    if (!wp_next_scheduled('mrsg_daily_license_check')) {
-        wp_schedule_event(time()+3600, 'daily', 'mrsg_daily_license_check');
-    }
-});
-register_deactivation_hook(__FILE__, function(){
-    wp_clear_scheduled_hook('mrsg_daily_license_check');
-});
+require_once plugin_dir_path(__FILE__) . 'includes/coupon-logic.php';

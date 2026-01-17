@@ -1,27 +1,43 @@
-=== mrs Gutschein Extend ===
-Contributors: mrs-dev
-Donate link: https://mrs-dev.com
-Tags: woocommerce, coupon, discount, sale, license, lemon-squeezy, coupons
-Requires at least: 5.0
-Tested up to: 6.5
-Requires PHP: 7.4
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# MRS Gutschein Extend
 
-== Description ==
-mrs Gutschein Extend verhindert doppelte Rabatte in WooCommerce, indem Angebotspreise für bestimmte Produkte oder Kategorien deaktiviert werden, wenn ein definierter Gutschein angewendet wird. Plugin unterstützt Free- und Pro-Funktionen (Lizenz via Lemon Squeezy).
+**Version:** 1.0.0  
+**Author:** Raeed  
+**License:** GPL-2.0-or-later  
+**Requires WooCommerce**
 
-== Installation ==
-1. Upload `mrs-gutschein-extend` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Go to Dashboard → Marketing → mrs Gutschein Extend and configure API Key + License (if you have Pro)
-4. Enjoy
+---
 
-== Frequently Asked Questions ==
-= Ist das Plugin GPL-kompatibel? =
-Ja — das Plugin ist unter GPL2+ lizenziert. Lizenzprüfung nutzt öffentliche API-Endpunkte, Code bleibt offen.
+## 🧩 Description
 
-== Changelog ==
-= 1.0.0 =
-* Initial release
+**MRS Gutschein Extend** is a WooCommerce extension that gives store owners full control over how coupons interact with sale prices.
+
+When a selected coupon is applied, the plugin automatically **disables sale prices** for products or categories assigned to that coupon.  
+This ensures **coupon priority over sale prices** and prevents unintended double discounts.
+
+---
+
+## ✨ Features
+
+- Disable sale prices when a specific coupon is applied
+- Supports:
+  - Products assigned in the coupon
+  - Categories assigned in the coupon
+- Admin interface under **WooCommerce → Marketing**
+- Coupon selection via dropdown
+- One-time cart notice for customers
+- Fully translatable (i18n ready)
+- Clean and modular code structure
+
+---
+
+## ⚙️ How It Works
+
+1. Admin selects a coupon in **Marketing → MRS Gutschein Extend**
+2. Customer applies this coupon in the cart
+3. Sale prices for matching products/categories are temporarily removed
+4. Coupon discount is applied to the regular price only
+
+---
+
+## 📂 Plugin Structure
+
