@@ -1,36 +1,41 @@
+=== MRS Gutschein Extend ===
+Contributors: raeed
+Tags: woocommerce, coupon, discount, sale price
+Requires at least: 6.0
+Tested up to: 6.4
+Stable tag: 2.2
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
----
 
-## 🛠 Installation
+== Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/`
-2. Activate the plugin via WordPress Admin
-3. Navigate to **Marketing → MRS Gutschein Extend**
-4. Select the coupon and save
+2. Activate the plugin via the WordPress Admin dashboard
+3. Navigate to Marketing → MRS Gutschein Extend
+4. Select the coupon and save the settings
 
----
 
-## 🗺 Roadmap
+== Roadmap ==
 
-### v1.1.0
-- Support multiple coupons
-- Category-only rules
+= v1.1.0 =
+* Support multiple coupons
+* Category-only rules
 
-### v1.2.0
-- User role conditions
-- Time-based rules
+= v1.2.0 =
+* User role conditions
+* Time-based rules
 
-### v1.3.0
-- Debug logging
-- WooCommerce system status integration
+= v1.3.0 =
+* Debug logging
+* WooCommerce system status integration
 
-### v2.0.0
-- Rule builder UI
-- Modern React-based admin interface
+= v2.0.0 =
+* Rule builder UI
+* Modern React-based admin interface
 
----
 
-## 📄 License
+== License ==
 
-This plugin is licensed under the **GNU General Public License v2.0 or later**.  
-You are free to use, modify, and distribute it.
+License: GPLv2 or later  
+License URI: https://www.gnu.org/licenses/gpl-2.0.html

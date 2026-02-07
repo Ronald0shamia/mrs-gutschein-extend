@@ -6,6 +6,7 @@
  * Author: MRS DEV
  * Version: 1.0.0
  * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: mrs-gutschein-extend
  * Domain Path: /languages
  */
