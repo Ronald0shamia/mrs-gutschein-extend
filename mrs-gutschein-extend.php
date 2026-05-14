@@ -4,7 +4,7 @@
  * Plugin URI:  https://mrs-dev.com/mrs-gutschein-extend/
  * Description: Extends WooCommerce coupons by disabling sale prices when selected coupons are applied.
  * Author: MRS DEV
- * Version: 1.0.0
+ * Version: 1.1.0
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: mrs-gutschein-extend

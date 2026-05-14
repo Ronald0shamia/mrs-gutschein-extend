@@ -1,33 +1,41 @@
-## 🛠 Installation
+# MRS Gutschein Extend
+
+Extends WooCommerce coupons by disabling sale prices when selected coupons are applied.
+
+## Installation
 
 1. Upload the plugin to `/wp-content/plugins/`
 2. Activate the plugin via the WordPress Admin dashboard
-3. Navigate to **Marketing → MRS Gutschein Extend**
-4. Select the coupon and save the settings
+3. Navigate to **Marketing -> MRS Gutschein Extend**
+4. Select one or more coupons and save the settings
 
----
+## Features
 
-## 🗺 Roadmap
+- Support for multiple coupons
+- Backward compatible migration from the old single-coupon setting
+- Optional cart notice when sale prices are disabled
+- Customizable cart notice text
+- Product, variation, and product category matching based on WooCommerce coupon rules
 
-### v1.1.0
-- Support multiple coupons
-- Category-only rules
+## Roadmap
 
 ### v1.2.0
+
+- Category-only rules
 - User role conditions
 - Time-based rules
 
 ### v1.3.0
+
 - Debug logging
 - WooCommerce system status integration
 
 ### v2.0.0
+
 - Rule builder UI
 - Modern React-based admin interface
 
----
+## License
 
-## 📄 License
-
-- **License:** GPLv2 or later  
+- **License:** GPLv2 or later
 - **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
