@@ -1,0 +1,454 @@
+.mrs-gutschein-admin {
+    --mrs-bg: #f6f7f9;
+    --mrs-surface: #ffffff;
+    --mrs-surface-soft: #f9fafb;
+    --mrs-border: #d9e0e8;
+    --mrs-border-strong: #b9c6d4;
+    --mrs-text: #17212b;
+    --mrs-muted: #5f6f80;
+    --mrs-blue: #2563eb;
+    --mrs-teal: #0f766e;
+    --mrs-amber: #b45309;
+    --mrs-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    color: var(--mrs-text);
+    margin: 24px 22px 0 2px;
+    max-width: 1280px;
+}
+
+.mrs-gutschein-admin * {
+    box-sizing: border-box;
+}
+
+.mrs-ge-header {
+    align-items: center;
+    background: var(--mrs-surface);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    box-shadow: var(--mrs-shadow);
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 24px;
+}
+
+.mrs-ge-brand {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    min-width: 0;
+}
+
+.mrs-ge-logo {
+    border-radius: 8px;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+    flex: 0 0 auto;
+    height: 64px;
+    object-fit: cover;
+    width: 64px;
+}
+
+.mrs-ge-kicker {
+    color: var(--mrs-teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 4px;
+    text-transform: uppercase;
+}
+
+.mrs-gutschein-admin h1,
+.mrs-gutschein-admin h2,
+.mrs-gutschein-admin p {
+    margin-top: 0;
+}
+
+.mrs-gutschein-admin h1 {
+    color: var(--mrs-text);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.mrs-gutschein-admin h2 {
+    color: var(--mrs-text);
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 5px;
+}
+
+.mrs-ge-lead,
+.mrs-ge-panel-head p,
+.mrs-ge-actions span {
+    color: var(--mrs-muted);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.mrs-ge-stats {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.mrs-ge-stat,
+.mrs-ge-pill {
+    background: var(--mrs-surface-soft);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    min-width: 118px;
+    padding: 12px 14px;
+}
+
+.mrs-ge-stat span {
+    color: var(--mrs-blue);
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.mrs-ge-stat small {
+    color: var(--mrs-muted);
+    display: block;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.mrs-ge-pill {
+    align-items: center;
+    color: var(--mrs-amber);
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    min-width: 76px;
+}
+
+.mrs-ge-layout {
+    align-items: start;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+.mrs-ge-panel {
+    background: var(--mrs-surface);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    padding: 20px;
+}
+
+.mrs-ge-panel + .mrs-ge-panel {
+    margin-top: 18px;
+}
+
+.mrs-ge-panel-head {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.mrs-ge-search {
+    align-items: center;
+    background: var(--mrs-surface-soft);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    display: flex;
+    flex: 0 0 280px;
+    gap: 8px;
+    padding: 0 12px;
+}
+
+.mrs-ge-search .dashicons {
+    color: var(--mrs-muted);
+    height: 18px;
+    width: 18px;
+}
+
+.mrs-ge-search input {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: var(--mrs-text);
+    min-height: 42px;
+    outline: 0;
+    width: 100%;
+}
+
+.mrs-ge-coupon-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mrs-ge-coupon-row {
+    align-items: center;
+    background: var(--mrs-surface-soft);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+    min-height: 64px;
+    padding: 12px;
+    transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.mrs-ge-coupon-row:hover,
+.mrs-ge-coupon-row:focus-within {
+    border-color: var(--mrs-border-strong);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.mrs-ge-coupon-row.is-selected {
+    background: #eef6ff;
+    border-color: #7aa7f7;
+}
+
+.mrs-ge-coupon-row input {
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.mrs-ge-check {
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid var(--mrs-border-strong);
+    border-radius: 6px;
+    display: flex;
+    flex: 0 0 24px;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+}
+
+.mrs-ge-coupon-row.is-selected .mrs-ge-check {
+    background: var(--mrs-blue);
+    border-color: var(--mrs-blue);
+}
+
+.mrs-ge-coupon-row.is-selected .mrs-ge-check::after {
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    content: "";
+    height: 10px;
+    transform: rotate(45deg);
+    width: 5px;
+}
+
+.mrs-ge-coupon-content {
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+}
+
+.mrs-ge-coupon-code {
+    color: var(--mrs-text);
+    font-size: 15px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.mrs-ge-coupon-meta {
+    color: var(--mrs-muted);
+    font-size: 12px;
+}
+
+.mrs-ge-empty {
+    align-items: flex-start;
+    background: var(--mrs-surface-soft);
+    border: 1px dashed var(--mrs-border-strong);
+    border-radius: 8px;
+    color: var(--mrs-muted);
+    display: grid;
+    gap: 4px;
+    grid-column: 1 / -1;
+    padding: 24px;
+}
+
+.mrs-ge-empty strong {
+    color: var(--mrs-text);
+}
+
+.mrs-ge-toggle {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.mrs-ge-toggle input {
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.mrs-ge-toggle-track {
+    background: #cbd5e1;
+    border-radius: 999px;
+    display: inline-flex;
+    flex: 0 0 44px;
+    height: 24px;
+    padding: 3px;
+    transition: background-color 140ms ease;
+}
+
+.mrs-ge-toggle-track::after {
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+    content: "";
+    height: 18px;
+    transform: translateX(0);
+    transition: transform 140ms ease;
+    width: 18px;
+}
+
+.mrs-ge-toggle input:checked + .mrs-ge-toggle-track {
+    background: var(--mrs-teal);
+}
+
+.mrs-ge-toggle input:checked + .mrs-ge-toggle-track::after {
+    transform: translateX(20px);
+}
+
+.mrs-ge-field {
+    color: var(--mrs-text);
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mrs-ge-input {
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    box-shadow: none;
+    min-height: 42px;
+    width: 100%;
+}
+
+.mrs-ge-input:focus,
+.mrs-ge-search input:focus {
+    border-color: var(--mrs-blue);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.mrs-ge-preview,
+.mrs-ge-mode {
+    align-items: flex-start;
+    background: #f7fbfa;
+    border: 1px solid #c7e3df;
+    border-radius: 8px;
+    color: #164e48;
+    display: flex;
+    gap: 10px;
+    line-height: 1.45;
+    margin-top: 14px;
+    padding: 12px;
+}
+
+.mrs-ge-mode {
+    align-items: center;
+    color: var(--mrs-text);
+    margin-top: 0;
+}
+
+.mrs-ge-mode .dashicons,
+.mrs-ge-preview .dashicons {
+    color: var(--mrs-teal);
+}
+
+.mrs-ge-actions {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--mrs-border);
+    border-radius: 8px;
+    bottom: 24px;
+    box-shadow: var(--mrs-shadow);
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding: 14px 16px;
+    position: sticky;
+    z-index: 10;
+}
+
+.mrs-ge-actions strong,
+.mrs-ge-actions span {
+    display: block;
+}
+
+.mrs-ge-actions .button-primary {
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 1100px) {
+    .mrs-ge-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .mrs-ge-side {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mrs-ge-panel + .mrs-ge-panel {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 782px) {
+    .mrs-gutschein-admin {
+        margin-right: 12px;
+    }
+
+    .mrs-ge-header,
+    .mrs-ge-panel-head,
+    .mrs-ge-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .mrs-ge-brand {
+        align-items: flex-start;
+    }
+
+    .mrs-ge-stats,
+    .mrs-ge-side,
+    .mrs-ge-coupon-list {
+        grid-template-columns: 1fr;
+    }
+
+    .mrs-ge-side {
+        display: grid;
+    }
+
+    .mrs-ge-search {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .mrs-ge-actions {
+        bottom: 12px;
+    }
+
+    .mrs-ge-actions .button-primary {
+        text-align: center;
+        width: 100%;
+    }
+}

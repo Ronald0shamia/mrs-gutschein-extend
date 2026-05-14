@@ -15,6 +15,18 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+if (!defined('MRS_GUTSCHEIN_EXTEND_VERSION')) {
+    define('MRS_GUTSCHEIN_EXTEND_VERSION', '1.1.0');
+}
+
+if (!defined('MRS_GUTSCHEIN_EXTEND_PATH')) {
+    define('MRS_GUTSCHEIN_EXTEND_PATH', plugin_dir_path(__FILE__));
+}
+
+if (!defined('MRS_GUTSCHEIN_EXTEND_URL')) {
+    define('MRS_GUTSCHEIN_EXTEND_URL', plugin_dir_url(__FILE__));
+}
+
 /**
  * ===== TEXTDOMAIN LADEN =====
  */
@@ -31,7 +43,7 @@ function mrs_gutschein_extend_load_textdomain() {
  * ===== ADMIN & LOGIK LADEN =====
  */
 if (is_admin()) {
-    require_once plugin_dir_path(__FILE__) . 'includes/admin-page.php';
+    require_once MRS_GUTSCHEIN_EXTEND_PATH . 'includes/admin-page.php';
 }
 
-require_once plugin_dir_path(__FILE__) . 'includes/coupon-logic.php';
+require_once MRS_GUTSCHEIN_EXTEND_PATH . 'includes/coupon-logic.php';
