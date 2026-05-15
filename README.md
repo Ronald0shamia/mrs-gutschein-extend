@@ -14,6 +14,7 @@ Extends WooCommerce coupons by disabling sale prices when selected coupons are a
 - Support for multiple coupons
 - Modern responsive admin interface
 - Searchable coupon selection
+- English source strings with German and Arabic translations
 - Backward compatible migration from the old single-coupon setting
 - Optional cart notice when sale prices are disabled
 - Customizable cart notice text

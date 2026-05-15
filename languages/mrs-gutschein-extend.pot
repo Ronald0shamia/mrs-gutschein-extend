@@ -3,10 +3,6 @@ msgstr ""
 "Project-Id-Version: MRS Gutschein Extend 1.1.0\n"
 "Report-Msgid-Bugs-To: https://mrs-dev.com/\n"
 "POT-Creation-Date: 2026-05-15 00:00+0000\n"
-"PO-Revision-Date: 2026-05-15 00:00+0000\n"
-"Last-Translator: MRS DEV\n"
-"Language-Team: German\n"
-"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,76 +10,76 @@ msgstr ""
 "X-Domain: mrs-gutschein-extend\n"
 
 msgid "MRS Gutschein Extend"
-msgstr "MRS Gutschein Extend"
+msgstr ""
 
 msgid "You do not have permission to access this page."
-msgstr "Du hast keine Berechtigung, auf diese Seite zuzugreifen."
+msgstr ""
 
 msgid "Settings saved."
-msgstr "Einstellungen gespeichert."
+msgstr ""
 
 msgid "WooCommerce Coupon Control"
-msgstr "WooCommerce Gutschein-Steuerung"
+msgstr ""
 
 msgid "Control which coupons disable sale prices in the cart."
-msgstr "Steuere, welche Gutscheine Angebotspreise im Warenkorb deaktivieren."
+msgstr ""
 
 msgid "Plugin Status"
-msgstr "Plugin-Status"
+msgstr ""
 
 msgid "Active coupons"
-msgstr "Aktive Gutscheine"
+msgstr ""
 
 msgid "Available"
-msgstr "Verfügbar"
+msgstr ""
 
 msgid "Coupons"
-msgstr "Gutscheine"
+msgstr ""
 
 msgid "Selected coupons disable sale prices for matching products and categories."
-msgstr "Ausgewählte Gutscheine deaktivieren Angebotspreise für passende Produkte und Kategorien."
+msgstr ""
 
 msgid "Search coupons..."
-msgstr "Gutscheine suchen..."
+msgstr ""
 
 msgid "No coupons found."
-msgstr "Keine Gutscheine gefunden."
+msgstr ""
 
 msgid "Create a WooCommerce coupon first."
-msgstr "Lege zuerst einen WooCommerce Gutschein an."
+msgstr ""
 
 msgid "ID #%d"
-msgstr "ID #%d"
+msgstr ""
 
 msgid "Cart notice"
-msgstr "Warenkorb-Hinweis"
+msgstr ""
 
 msgid "Text and visibility for customers."
-msgstr "Text und Sichtbarkeit für Kunden."
+msgstr ""
 
 msgid "Show notice"
-msgstr "Hinweis anzeigen"
+msgstr ""
 
 msgid "Notice text"
-msgstr "Hinweistext"
+msgstr ""
 
 msgid "Rule mode"
-msgstr "Regelmodus"
+msgstr ""
 
 msgid "The plugin currently uses the product and category rules from each coupon."
-msgstr "Das Plugin nutzt aktuell die Produkt- und Kategorie-Regeln des jeweiligen Gutscheins."
+msgstr ""
 
 msgid "WooCommerce rules"
-msgstr "WooCommerce-Regeln"
+msgstr ""
 
 msgid "Ready to save"
-msgstr "Bereit zum Speichern"
+msgstr ""
 
 msgid "Changes are used immediately for new cart calculations."
-msgstr "Änderungen werden sofort für neue Warenkorb-Berechnungen verwendet."
+msgstr ""
 
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 msgid "Sale prices were disabled because a coupon was applied."
-msgstr "Angebotspreise wurden deaktiviert, da ein Gutschein angewendet wurde."
+msgstr ""

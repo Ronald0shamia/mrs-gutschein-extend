@@ -58,7 +58,7 @@ function mrs_gutschein_extend_get_selected_coupons() {
 
 function mrs_gutschein_extend_admin_page() {
     if (!current_user_can('manage_woocommerce')) {
-        wp_die(esc_html__('Keine Berechtigung.', 'mrs-gutschein-extend'));
+        wp_die(esc_html__('You do not have permission to access this page.', 'mrs-gutschein-extend'));
     }
 
     if (
@@ -87,16 +87,13 @@ function mrs_gutschein_extend_admin_page() {
         update_option('mrs_gutschein_notice_text', $notice_text);
 
         echo '<div class="notice notice-success is-dismissible"><p><strong>' .
-            esc_html__('Einstellungen gespeichert!', 'mrs-gutschein-extend') .
+            esc_html__('Settings saved.', 'mrs-gutschein-extend') .
             '</strong></p></div>';
     }
 
     $saved_coupons = mrs_gutschein_extend_get_selected_coupons();
     $notice_enabled = get_option('mrs_gutschein_notice_enabled', 'yes');
-    $notice_text = get_option(
-        'mrs_gutschein_notice_text',
-        __('Angebotspreise wurden deaktiviert, da ein Gutschein angewendet wurde.', 'mrs-gutschein-extend')
-    );
+    $notice_text = mrs_gutschein_extend_get_notice_text();
 
     $coupons = get_posts([
         'post_type' => 'shop_coupon',
@@ -121,7 +118,7 @@ function mrs_gutschein_extend_admin_page() {
                     <h1><?php esc_html_e('MRS Gutschein Extend', 'mrs-gutschein-extend'); ?></h1>
                     <p class="mrs-ge-lead">
                         <?php esc_html_e(
-                            'Steuere, welche Gutscheine Angebotspreise im Warenkorb deaktivieren.',
+                            'Control which coupons disable sale prices in the cart.',
                             'mrs-gutschein-extend'
                         ); ?>
                     </p>
@@ -131,11 +128,11 @@ function mrs_gutschein_extend_admin_page() {
             <div class="mrs-ge-stats" aria-label="<?php esc_attr_e('Plugin Status', 'mrs-gutschein-extend'); ?>">
                 <div class="mrs-ge-stat">
                     <span><?php echo esc_html((string) $selected_count); ?></span>
-                    <small><?php esc_html_e('Aktive Gutscheine', 'mrs-gutschein-extend'); ?></small>
+                    <small><?php esc_html_e('Active coupons', 'mrs-gutschein-extend'); ?></small>
                 </div>
                 <div class="mrs-ge-stat">
                     <span><?php echo esc_html((string) $coupon_count); ?></span>
-                    <small><?php esc_html_e('Verfuegbar', 'mrs-gutschein-extend'); ?></small>
+                    <small><?php esc_html_e('Available', 'mrs-gutschein-extend'); ?></small>
                 </div>
                 <div class="mrs-ge-pill">
                     <?php echo esc_html(MRS_GUTSCHEIN_EXTEND_VERSION); ?>
@@ -150,10 +147,10 @@ function mrs_gutschein_extend_admin_page() {
                 <section class="mrs-ge-panel mrs-ge-panel-main" aria-labelledby="mrs-ge-coupons-title">
                     <div class="mrs-ge-panel-head">
                         <div>
-                            <h2 id="mrs-ge-coupons-title"><?php esc_html_e('Gutscheine', 'mrs-gutschein-extend'); ?></h2>
+                            <h2 id="mrs-ge-coupons-title"><?php esc_html_e('Coupons', 'mrs-gutschein-extend'); ?></h2>
                             <p>
                                 <?php esc_html_e(
-                                    'Ausgewaehlte Coupons deaktivieren Sale-Preise fuer passende Produkte und Kategorien.',
+                                    'Selected coupons disable sale prices for matching products and categories.',
                                     'mrs-gutschein-extend'
                                 ); ?>
                             </p>
@@ -163,7 +160,7 @@ function mrs_gutschein_extend_admin_page() {
                             <input
                                 type="search"
                                 data-mrs-coupon-search
-                                placeholder="<?php esc_attr_e('Gutschein suchen...', 'mrs-gutschein-extend'); ?>"
+                                placeholder="<?php esc_attr_e('Search coupons...', 'mrs-gutschein-extend'); ?>"
                             >
                         </label>
                     </div>
@@ -171,8 +168,8 @@ function mrs_gutschein_extend_admin_page() {
                     <div class="mrs-ge-coupon-list" data-mrs-coupon-list>
                         <?php if (empty($coupons)): ?>
                             <div class="mrs-ge-empty">
-                                <strong><?php esc_html_e('Keine Gutscheine gefunden.', 'mrs-gutschein-extend'); ?></strong>
-                                <span><?php esc_html_e('Lege zuerst einen WooCommerce Gutschein an.', 'mrs-gutschein-extend'); ?></span>
+                                <strong><?php esc_html_e('No coupons found.', 'mrs-gutschein-extend'); ?></strong>
+                                <span><?php esc_html_e('Create a WooCommerce coupon first.', 'mrs-gutschein-extend'); ?></span>
                             </div>
                         <?php else: ?>
                             <?php foreach ($coupons as $coupon): ?>
@@ -208,8 +205,8 @@ function mrs_gutschein_extend_admin_page() {
                     <section class="mrs-ge-panel" aria-labelledby="mrs-ge-notice-title">
                         <div class="mrs-ge-panel-head">
                             <div>
-                                <h2 id="mrs-ge-notice-title"><?php esc_html_e('Warenkorb-Hinweis', 'mrs-gutschein-extend'); ?></h2>
-                                <p><?php esc_html_e('Text und Sichtbarkeit fuer Kunden.', 'mrs-gutschein-extend'); ?></p>
+                                <h2 id="mrs-ge-notice-title"><?php esc_html_e('Cart notice', 'mrs-gutschein-extend'); ?></h2>
+                                <p><?php esc_html_e('Text and visibility for customers.', 'mrs-gutschein-extend'); ?></p>
                             </div>
                         </div>
 
@@ -221,11 +218,11 @@ function mrs_gutschein_extend_admin_page() {
                                 <?php checked($notice_enabled, 'yes'); ?>
                             >
                             <span class="mrs-ge-toggle-track" aria-hidden="true"></span>
-                            <span><?php esc_html_e('Hinweis anzeigen', 'mrs-gutschein-extend'); ?></span>
+                            <span><?php esc_html_e('Show notice', 'mrs-gutschein-extend'); ?></span>
                         </label>
 
                         <label class="mrs-ge-field" for="mrs_gutschein_notice_text">
-                            <span><?php esc_html_e('Hinweistext', 'mrs-gutschein-extend'); ?></span>
+                            <span><?php esc_html_e('Notice text', 'mrs-gutschein-extend'); ?></span>
                         </label>
                         <input
                             type="text"
@@ -244,13 +241,13 @@ function mrs_gutschein_extend_admin_page() {
                     <section class="mrs-ge-panel" aria-labelledby="mrs-ge-mode-title">
                         <div class="mrs-ge-panel-head">
                             <div>
-                                <h2 id="mrs-ge-mode-title"><?php esc_html_e('Regelmodus', 'mrs-gutschein-extend'); ?></h2>
-                                <p><?php esc_html_e('Aktuell nutzt das Plugin die Produkt- und Kategorie-Regeln des Coupons.', 'mrs-gutschein-extend'); ?></p>
+                                <h2 id="mrs-ge-mode-title"><?php esc_html_e('Rule mode', 'mrs-gutschein-extend'); ?></h2>
+                                <p><?php esc_html_e('The plugin currently uses the product and category rules from each coupon.', 'mrs-gutschein-extend'); ?></p>
                             </div>
                         </div>
                         <div class="mrs-ge-mode">
                             <span class="dashicons dashicons-yes-alt" aria-hidden="true"></span>
-                            <strong><?php esc_html_e('WooCommerce Regeln', 'mrs-gutschein-extend'); ?></strong>
+                            <strong><?php esc_html_e('WooCommerce rules', 'mrs-gutschein-extend'); ?></strong>
                         </div>
                     </section>
                 </aside>
@@ -258,10 +255,10 @@ function mrs_gutschein_extend_admin_page() {
 
             <div class="mrs-ge-actions">
                 <div>
-                    <strong><?php esc_html_e('Bereit zum Speichern', 'mrs-gutschein-extend'); ?></strong>
-                    <span><?php esc_html_e('Aenderungen werden sofort fuer neue Warenkorb-Berechnungen verwendet.', 'mrs-gutschein-extend'); ?></span>
+                    <strong><?php esc_html_e('Ready to save', 'mrs-gutschein-extend'); ?></strong>
+                    <span><?php esc_html_e('Changes are used immediately for new cart calculations.', 'mrs-gutschein-extend'); ?></span>
                 </div>
-                <?php submit_button(__('Speichern', 'mrs-gutschein-extend'), 'primary', 'submit', false); ?>
+                <?php submit_button(__('Save', 'mrs-gutschein-extend'), 'primary', 'submit', false); ?>
             </div>
         </form>
     </div>

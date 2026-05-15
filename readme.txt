@@ -25,6 +25,7 @@ MRS Gutschein Extend lets shop admins select one or more WooCommerce coupons tha
 * Support for multiple coupons
 * Modern responsive admin interface
 * Searchable coupon selection
+* English source strings with German and Arabic translations
 * Backward compatible migration from the old single-coupon setting
 * Optional cart notice when sale prices are disabled
 * Customizable cart notice text
@@ -36,6 +37,7 @@ MRS Gutschein Extend lets shop admins select one or more WooCommerce coupons tha
 * Added support for multiple coupons.
 * Added a modern responsive admin interface.
 * Added searchable coupon selection.
+* Added German and Arabic translations.
 * Added configurable cart notices.
 * Added nonce validation for admin settings.
 * Improved product, variation, and category matching.

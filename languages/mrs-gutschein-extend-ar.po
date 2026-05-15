@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MRS Gutschein Extend 1.1.0\n"
+"Report-Msgid-Bugs-To: https://mrs-dev.com/\n"
+"POT-Creation-Date: 2026-05-15 00:00+0000\n"
+"PO-Revision-Date: 2026-05-15 00:00+0000\n"
+"Last-Translator: MRS DEV\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex\n"
+"X-Domain: mrs-gutschein-extend\n"
+
+msgid "MRS Gutschein Extend"
+msgstr "MRS Gutschein Extend"
+
+msgid "You do not have permission to access this page."
+msgstr "ليست لديك صلاحية للوصول إلى هذه الصفحة."
+
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+msgid "WooCommerce Coupon Control"
+msgstr "التحكم في قسائم WooCommerce"
+
+msgid "Control which coupons disable sale prices in the cart."
+msgstr "تحكم في القسائم التي تعطل أسعار التخفيضات في سلة التسوق."
+
+msgid "Plugin Status"
+msgstr "حالة الإضافة"
+
+msgid "Active coupons"
+msgstr "القسائم النشطة"
+
+msgid "Available"
+msgstr "متاح"
+
+msgid "Coupons"
+msgstr "القسائم"
+
+msgid "Selected coupons disable sale prices for matching products and categories."
+msgstr "القسائم المحددة تعطل أسعار التخفيضات للمنتجات والتصنيفات المطابقة."
+
+msgid "Search coupons..."
+msgstr "البحث في القسائم..."
+
+msgid "No coupons found."
+msgstr "لم يتم العثور على قسائم."
+
+msgid "Create a WooCommerce coupon first."
+msgstr "أنشئ قسيمة WooCommerce أولاً."
+
+msgid "ID #%d"
+msgstr "المعرف #%d"
+
+msgid "Cart notice"
+msgstr "تنبيه سلة التسوق"
+
+msgid "Text and visibility for customers."
+msgstr "النص وإمكانية الظهور للعملاء."
+
+msgid "Show notice"
+msgstr "إظهار التنبيه"
+
+msgid "Notice text"
+msgstr "نص التنبيه"
+
+msgid "Rule mode"
+msgstr "وضع القواعد"
+
+msgid "The plugin currently uses the product and category rules from each coupon."
+msgstr "تستخدم الإضافة حالياً قواعد المنتج والتصنيف من كل قسيمة."
+
+msgid "WooCommerce rules"
+msgstr "قواعد WooCommerce"
+
+msgid "Ready to save"
+msgstr "جاهز للحفظ"
+
+msgid "Changes are used immediately for new cart calculations."
+msgstr "تُستخدم التغييرات فوراً في حسابات سلة التسوق الجديدة."
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Sale prices were disabled because a coupon was applied."
+msgstr "تم تعطيل أسعار التخفيضات بسبب تطبيق قسيمة."

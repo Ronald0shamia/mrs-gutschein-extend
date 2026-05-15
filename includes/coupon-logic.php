@@ -53,10 +53,7 @@ function mrs_gutschein_extend_maybe_show_notice() {
         return;
     }
 
-    $notice_text = get_option(
-        'mrs_gutschein_notice_text',
-        __('Angebotspreise wurden deaktiviert, da ein Gutschein angewendet wurde.', 'mrs-gutschein-extend')
-    );
+    $notice_text = mrs_gutschein_extend_get_notice_text();
 
     if (!$notice_text) {
         return;
